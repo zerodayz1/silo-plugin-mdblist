@@ -1,3 +1,26 @@
+> [!IMPORTANT]
+> **This plugin is retired. Use the official MDBList plugin instead:**
+> [Silo-Server/silo-plugin-metadata-mdblist](https://github.com/Silo-Server/silo-plugin-metadata-mdblist),
+> available in Silo's built-in plugin catalog as **MDBList Ratings**.
+>
+> The official plugin does everything this one did and more:
+> - **Backfill without a rescan.** It opts into Silo's hourly *Bulk Metadata
+>   Enrichment* task, which fills ratings and age ratings for titles already in
+>   your library without refreshing their metadata. Run it now from
+>   Admin → Tasks.
+> - **Batched API calls**, up to 100 titles per MDBList request, with a pause
+>   (not a failure) when your daily quota runs out.
+> - **Rotten Tomatoes on current Silo.** Since Silo build-1058, Silo only stores
+>   RT scores from a plugin that declares them. This plugin does not, so its RT
+>   scores are dropped. (The official plugin's declaration lands in its 0.5.0.)
+> - Age ratings (Common Sense), certifications, per-source vote counts.
+>
+> **Switching:** both plugins use the plugin id `silo.mdblist`, so installing
+> the official one from the catalog replaces this one in place. Then re-enter
+> your API key (its setting is called *MDBList Account*), check that **MDBList**
+> sits below TMDB/TVDB in each library's provider chain, and remove any leftover
+> "IMDB"/"TMDB" rows from this plugin. Existing ratings are kept.
+
 # silo-plugin-mdblist
 
 A [Silo](https://siloserver.org) metadata-provider plugin that enriches media
